@@ -1,0 +1,141 @@
+/* Aetheria Tactics - Cyberpunk Glassmorphism Theme */
+:root {
+  --bg-dark: #070a13;
+  --bg-panel: rgba(14, 21, 37, 0.85);
+  --primary-cyan: #00f0ff;
+  --primary-magenta: #ff007f;
+  --primary-amber: #ffaa00;
+  --border-neon: rgba(0, 240, 255, 0.3);
+  --text-main: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  overflow: hidden;
+  height: 100vh;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#game-header {
+  height: 56px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-neon);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--primary-cyan);
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255, 0, 127, 0.2);
+  color: var(--primary-magenta);
+  border: 1px solid var(--primary-magenta);
+}
+
+#viewport-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #111a2e 0%, #070a13 100%);
+}
+
+#tactical-canvas {
+  box-shadow: 0 0 40px rgba(0, 240, 255, 0.15);
+  border: 1px solid var(--border-neon);
+  border-radius: 8px;
+}
+
+#combat-hud {
+  position: absolute;
+  bottom: 20px;
+}
+
+#action-bar {
+  display: flex;
+  gap: 12px;
+  background: var(--bg-panel);
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-neon);
+  backdrop-filter: blur(12px);
+}
+
+.action-btn {
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid var(--border-neon);
+  color: var(--text-main);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  background: var(--primary-cyan);
+  color: #000;
+  box-shadow: 0 0 15px var(--primary-cyan);
+}
+
+.end-turn {
+  border-color: var(--primary-amber);
+  color: var(--primary-amber);
+}
+
+.end-turn:hover {
+  background: var(--primary-amber);
+  color: #000;
+  box-shadow: 0 0 15px var(--primary-amber);
+}
+
+#combat-log {
+  height: 120px;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border-neon);
+  padding: 12px 24px;
+  font-size: 13px;
+  overflow-y: auto;
+}
+
+.log-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary-cyan);
+  margin-bottom: 6px;
+}
+
+.log-entry {
+  margin-bottom: 4px;
+  color: #94a3b8;
+}
+
+.log-entry.system {
+  color: var(--primary-cyan);
+}

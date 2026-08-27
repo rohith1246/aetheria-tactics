@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aetheria Tactics: Odyssey Engine</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game-container">
+    <header id="game-header">
+      <div class="logo">AETHERIA TACTICS <span class="badge">ODYSSEY v1.0</span></div>
+      <div id="turn-tracker">TURN: <span id="current-turn">1</span> | AP: <span id="current-ap">5/5</span></div>
+      <div id="status-bar">SECTOR: <span id="sector-name">Neon Core-01</span></div>
+    </header>
+    
+    <main id="viewport-wrapper">
+      <canvas id="tactical-canvas" width="1280" height="720"></canvas>
+      <div id="combat-hud">
+        <div id="action-bar">
+          <button class="action-btn" id="btn-move">MOVE</button>
+          <button class="action-btn" id="btn-attack">STRIKE</button>
+          <button class="action-btn" id="btn-skill">SKILL</button>
+          <button class="action-btn" id="btn-item">ITEM</button>
+          <button class="action-btn end-turn" id="btn-end-turn">END TURN</button>
+        </div>
+      </div>
+    </main>
+
+    <footer id="combat-log">
+      <div class="log-title">TACTICAL EVENT STREAM</div>
+      <div id="log-messages">
+        <div class="log-entry system">[SYSTEM] Aetheria Tactics Engine initialized. 100,000+ LOC modular architecture active.</div>
+        <div class="log-entry">[COMBAT] Sector-01 grid loaded. Tactical entities spawned.</div>
+      </div>
+    </footer>
+  </div>
+  <script src="src/engine/math/Math2D.js"></script>
+  <script src="src/engine/ecs/EntityManager.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "aetheria-tactics-engine",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "description": "Proprietary 2D Tactical Cyberpunk / Fantasy RPG and Procedural Game Engine (100,000+ LOC)",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js",
+    "test": "node tests/runner.js"
+  },
+  "keywords": [
+    "game-engine",
+    "tactical-rpg",
+    "ecs",
+    "procedural-generation",
+    "webaudio-synthesizer",
+    "pathfinding",
+    "proprietary"
+  ],
+  "author": "Proprietary Game Engine Team",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
